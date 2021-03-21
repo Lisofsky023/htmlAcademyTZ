@@ -39,7 +39,9 @@ let messages = [
     status: true,
   },
 ];
+
 // Модальное окно
+
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const modal = document.querySelector(button.dataset.modalTarget);
@@ -73,6 +75,8 @@ function closeModal(modal) {
   overlay.classList.remove("active");
 }
 
+// Уведомление
+
 function makeNotifications() {
   const $notifications = document.querySelector(".notifications");
   let readedCounter = 0;
@@ -85,39 +89,27 @@ function makeNotifications() {
   $notifications.innerText = `${readedCounter}`;
 }
 
-//
+//формируем список 
+
 document.addEventListener("DOMContentLoaded", () => {
   const $cont = document.getElementsByClassName("modal-body")[0];
   const $list = document.createElement("ul");
 
   for (let message of messages) {
-    let li = document.createElement("li"); // create li element.
+    let li = document.createElement("li"); 
     li.innerHTML = ` <div class="text-block">
                       <p class="item-text">${message.title}</p>
                       <p class="item-text">${message.author}</p>
-                      <a class="item-text" href="#">${message.linkInfo}</a>
+                      <a class="item-text" href="">${message.linkInfo}</a>
                       <p class="item-text">${message.createdAt}</p>
-                      </div>`; // assigning text to li using array value.
-    li.setAttribute("class", "item-element"); // remove the bullets.
+                      </div>`; 
+    li.setAttribute("class", "item-element"); 
 
-    $list.appendChild(li); // append li to ul.
+    $list.appendChild(li); 
   }
 
   $cont.appendChild($list);
 });
 
 makeNotifications();
-// for (let message of messages) {
-//   let amountOfMessage = messages.length;
-//   let li = document.createElement("li"); // create li element.
 
-//   li.innerHTML = ` <div class="text-block">
-//                       <p class="item-text">${message.title}</p>
-//                       <p class="item-text">${message.author}</p>
-//                       <a class="item-text" href="#">${message.linkInfo}</a>
-//                       <p class="item-text">${message.createdAt}</p>
-//                       </div>`; // assigning text to li using array value.
-//   li.setAttribute("class", "item-element"); // remove the bullets.
-
-//   list.appendChild(li); // append li to ul.
-// }
