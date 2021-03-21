@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="container" class="container">
-      <button data-modal-target="#modal" type="submit" class="logo-button">
-        <img class="logo-button__img" src="img/logo.png" alt="Submit" />
-      </button>
-      <div class="modal" id="modal">
-        <div class="error"></div>
-        <div class="modal-header">
-          <button data-close-button class="close-button">&times;</button>
-        </div>
-        <div class="modal-body"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/modal.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="container" class="container">
+    <button data-modal-target="#modal" type="submit" class="logo-button">
+      <img class="logo-button__img" src="img/logo.png" alt="Submit" />
+    </button>
+    <div class="modal" id="modal">
+      <div class="error"></div>
+      <div class="modal-header">
+        <button data-close-button class="close-button">&times;</button>
       </div>
-      <div class="notifications"></div>
+      <div class="modal-body"></div>
     </div>
-    <div id="overlay"></div>
-    <script src="js/index.js"></script>
-  </body>
+    <div class="notifications"></div>
+  </div>
+  <div id="overlay"></div>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

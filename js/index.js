@@ -2,8 +2,7 @@ const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
 // Массив
-let messages = [
-  {
+let messages = [{
     title: "SpaceX",
     author: "Ilon Mask",
     createdAt: "date",
@@ -96,20 +95,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const $list = document.createElement("ul");
 
   for (let message of messages) {
-    let li = document.createElement("li"); 
+    let li = document.createElement("li");
     li.innerHTML = ` <div class="text-block">
                       <p class="item-text">${message.title}</p>
                       <p class="item-text">${message.author}</p>
                       <a class="item-text" href="">${message.linkInfo}</a>
                       <p class="item-text">${message.createdAt}</p>
-                      </div>`; 
-    li.setAttribute("class", "item-element"); 
+                      </div>`;
+    li.setAttribute("class", "item-element");
 
-    $list.appendChild(li); 
+    $list.appendChild(li);
   }
 
   $cont.appendChild($list);
 });
 
 makeNotifications();
-
